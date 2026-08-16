@@ -8,6 +8,7 @@ import { BilheteCard } from '../components/bilhete/BilheteCard';
 import { PolaroidCard } from '../components/polaroid/PolaroidCard';
 import { ProximaParadaCard } from '../components/proximaParada/ProximaParadaCard';
 import { useProximaParada } from '../hooks/useProximaParada';
+import { RecadinhoCard } from '../components/recadinho/RecadinhoCard';
 import { END_DATE } from '../utils/constants';
 
 export function HojeScreen() {
@@ -37,6 +38,7 @@ export function HojeScreen() {
       <div className={styles.pendente}>
         <span className={styles.icone} aria-hidden="true">🌱</span>
         <p>O carinho de hoje ainda está sendo preparado. Volte daqui a pouco.</p>
+        <RecadinhoCard />
       </div>
     );
   }
@@ -47,6 +49,7 @@ export function HojeScreen() {
       <BilheteCard date={hojeISO} isSpecial={isSpecial} />
       {entry.hasPolaroid && <PolaroidCard date={hojeISO} />}
       {proximaParada && <ProximaParadaCard nomeLocal={proximaParada.nomeLocalProximaParada} />}
+      <RecadinhoCard />
     </>
   );
 }

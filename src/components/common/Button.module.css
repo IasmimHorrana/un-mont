@@ -21,6 +21,11 @@
   box-shadow: var(--shadow-adesivo-pressed);
 }
 
+.button:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+}
+
 .secondary {
   background: var(--color-paper-soft);
   border: 2px solid var(--color-paper-deep);

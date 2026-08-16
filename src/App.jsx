@@ -8,6 +8,7 @@ import { BilheteDetalheScreen } from './screens/BilheteDetalheScreen';
 import { DiaDetalheScreen } from './screens/DiaDetalheScreen';
 import { PolaroidDetalheScreen } from './screens/PolaroidDetalheScreen';
 import { ProximaParadaDetalheScreen } from './screens/ProximaParadaDetalheScreen';
+import { RecadinhoDetalheScreen } from './screens/RecadinhoDetalheScreen';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/bilhete/:data" element={<BilheteDetalheScreen />} />
           <Route path="/polaroid/:data" element={<PolaroidDetalheScreen />} />
           <Route path="/proxima-parada" element={<ProximaParadaDetalheScreen />} />
+          <Route path="/recadinho" element={<RecadinhoDetalheScreen />} />
           <Route path="/album/:data" element={<DiaDetalheScreen />} />
         </Routes>
       </BrowserRouter>

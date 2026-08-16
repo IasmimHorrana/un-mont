@@ -10,8 +10,13 @@
 }
 
 .selo {
-  font-size: 40px;
+  font-size: 36px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .texto {
