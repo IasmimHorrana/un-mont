@@ -14,7 +14,7 @@ export default defineConfig({
       manifest: {
         name: 'Diário Botânico do Amor',
         short_name: 'Diário Botânico',
-        description: 'Um bilhete e uma flor por dia, até completarmos um ano juntos.',
+        description: 'Um bilhete e uma flor por dia, até completarmos um ano juntas.',
         lang: 'pt-BR',
         start_url: '/',
         display: 'standalone',
@@ -22,7 +22,9 @@ export default defineConfig({
         theme_color: '#e3cfa3',
         icons: [
           { src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },
-          { src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'maskable' },
+          { src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+          { src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+          { src: '/maskable-icon-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
       },
     }),

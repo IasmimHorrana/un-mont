@@ -1,7 +1,11 @@
 import { useRef, useState } from 'react';
 import styles from './DiaCarousel.module.css';
 
-/** Carrossel horizontal com scroll-snap nativo (swipe funciona no touch) + setas e bolinhas clicáveis para navegação no mouse/desktop. */
+/**
+ * Carrossel horizontal com scroll-snap nativo (swipe funciona no touch).
+ * Setas e bolinhas ficam numa barra abaixo do slide (não sobre o conteúdo) —
+ * evita cobrir texto/imagem e ainda dá navegação por clique pra quem tá no mouse/desktop.
+ */
 export function DiaCarousel({ slides }) {
   const trackRef = useRef(null);
   const [active, setActive] = useState(0);
@@ -20,50 +24,48 @@ export function DiaCarousel({ slides }) {
 
   return (
     <div className={styles.wrap}>
-      <div className={styles.trackWrap}>
-        {active > 0 && (
+      <div className={styles.track} ref={trackRef} onScroll={handleScroll}>
+        {slides.map((slide) => (
+          <div className={styles.slide} key={slide.key}>
+            {slide.content}
+          </div>
+        ))}
+      </div>
+      {slides.length > 1 && (
+        <div className={styles.nav}>
           <button
             type="button"
-            className={`${styles.seta} ${styles.setaEsquerda}`}
+            className={styles.seta}
             onClick={() => goTo(active - 1)}
+            disabled={active === 0}
             aria-label="Slide anterior"
           >
             ‹
           </button>
-        )}
-        <div className={styles.track} ref={trackRef} onScroll={handleScroll}>
-          {slides.map((slide) => (
-            <div className={styles.slide} key={slide.key}>
-              {slide.content}
-            </div>
-          ))}
-        </div>
-        {active < slides.length - 1 && (
+          <div className={styles.dots} role="tablist" aria-label="Navegação do carrossel">
+            {slides.map((slide, i) => (
+              <button
+                key={slide.key}
+                type="button"
+                className={styles.dotHit}
+                onClick={() => goTo(i)}
+                role="tab"
+                aria-selected={i === active}
+                aria-label={`Ir para ${slide.key === 'flor' ? 'a flor' : slide.key === 'bilhete' ? 'o bilhete' : 'a foto'}`}
+              >
+                <span className={[styles.dot, i === active ? styles.dotAtiva : ''].filter(Boolean).join(' ')} />
+              </button>
+            ))}
+          </div>
           <button
             type="button"
-            className={`${styles.seta} ${styles.setaDireita}`}
+            className={styles.seta}
             onClick={() => goTo(active + 1)}
+            disabled={active === slides.length - 1}
             aria-label="Próximo slide"
           >
             ›
           </button>
-        )}
-      </div>
-      {slides.length > 1 && (
-        <div className={styles.dots} role="tablist" aria-label="Navegação do carrossel">
-          {slides.map((slide, i) => (
-            <button
-              key={slide.key}
-              type="button"
-              className={styles.dotHit}
-              onClick={() => goTo(i)}
-              role="tab"
-              aria-selected={i === active}
-              aria-label={`Ir para ${slide.key === 'flor' ? 'a flor' : slide.key === 'bilhete' ? 'o bilhete' : 'a foto'}`}
-            >
-              <span className={[styles.dot, i === active ? styles.dotAtiva : ''].filter(Boolean).join(' ')} />
-            </button>
-          ))}
         </div>
       )}
     </div>

@@ -6,13 +6,6 @@
   min-height: 0;
 }
 
-.trackWrap {
-  position: relative;
-  display: flex;
-  flex: 1;
-  min-height: 0;
-}
-
 .track {
   display: flex;
   flex: 1;
@@ -38,18 +31,23 @@
   padding: 0 4px;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
 .seta {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 5;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
   border-radius: 50%;
   border: none;
   background: var(--color-paper-soft);
   color: var(--color-ink);
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1;
   display: flex;
   align-items: center;
@@ -61,19 +59,15 @@
   box-shadow: var(--shadow-adesivo-pressed);
 }
 
-.setaEsquerda {
-  left: 2px;
-}
-
-.setaDireita {
-  right: 2px;
+.seta:disabled {
+  opacity: 0.35;
+  box-shadow: none;
 }
 
 .dots {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
 }
 
 .dotHit {
