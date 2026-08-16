@@ -32,10 +32,11 @@
   justify-content: center;
 }
 
-.florSvg {
-  width: 26px;
-  height: 26px;
+.florImg {
+  width: 28px;
+  height: 28px;
   display: block;
+  object-fit: contain;
 }
 
 .cadeadoImg {
