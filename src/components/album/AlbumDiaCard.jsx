@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import styles from './AlbumDiaCard.module.css';
 import { formatDatePtBR } from '../../utils/date';
+import cadeadoImg from '../../assets/cadeado.png';
 
 /**
  * SVG em vez de emoji: fontes de emoji (ex. Segoe UI Emoji no Windows) usam glifos em bitmap
@@ -46,7 +47,9 @@ export function AlbumDiaCard({ slot, isRead }) {
         aria-label={label}
       >
         <span className={styles.icone} aria-hidden="true">
-          {!unlocked ? '🔒' : hasContent ? (isSpecial ? '✨' : <FlorIcone />) : '🌱'}
+          {!unlocked
+            ? <img src={cadeadoImg} className={styles.cadeadoImg} alt="" />
+            : hasContent ? (isSpecial ? '✨' : <FlorIcone />) : '🌱'}
         </span>
         <span className={styles.diaNumero}>{formatDatePtBR(date)}</span>
       </button>

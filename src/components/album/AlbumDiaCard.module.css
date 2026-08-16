@@ -38,6 +38,13 @@
   display: block;
 }
 
+.cadeadoImg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  object-fit: contain;
+}
+
 .lida {
   position: absolute;
   top: 2px;
