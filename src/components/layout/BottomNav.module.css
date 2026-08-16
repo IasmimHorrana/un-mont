@@ -5,8 +5,9 @@
   display: flex;
   gap: var(--space-sm);
   padding: var(--space-sm) var(--space-md) calc(var(--space-sm) + var(--safe-bottom));
-  background: var(--color-kraft);
-  border-top: 2px dashed var(--color-mustard-deep);
+  background: var(--color-burnt-orange);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  box-shadow: var(--shadow-adesivo);
 }
 
 .link {
@@ -19,14 +20,15 @@
   padding: 8px;
   border-radius: var(--radius-lg);
   text-decoration: none;
+  font-family: var(--font-body);
   font-weight: 700;
-  color: var(--color-ink-soft);
+  color: var(--color-paper);
   background: transparent;
   transition: background 0.15s ease, color 0.15s ease;
 }
 
 .linkActive {
-  background: var(--color-mustard);
+  background: var(--color-paper);
   color: var(--color-ink);
-  box-shadow: var(--shadow-adesivo);
+  box-shadow: var(--shadow-adesivo-pressed);
 }

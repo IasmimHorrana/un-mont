@@ -5,11 +5,15 @@ import { LoadingState } from '../components/common/LoadingState';
 import { ErrorState } from '../components/common/ErrorState';
 import { FlorCard } from '../components/flor/FlorCard';
 import { BilheteCard } from '../components/bilhete/BilheteCard';
+import { PolaroidCard } from '../components/polaroid/PolaroidCard';
+import { ProximaParadaCard } from '../components/proximaParada/ProximaParadaCard';
+import { useProximaParada } from '../hooks/useProximaParada';
 import { END_DATE } from '../utils/constants';
 
 export function HojeScreen() {
   const { status, byDate, error, refetch } = useDiario();
   const { hojeISO, fase } = useCountdown();
+  const proximaParada = useProximaParada();
 
   if (status === 'loading') return <LoadingState />;
   if (status === 'error') {
@@ -39,8 +43,10 @@ export function HojeScreen() {
 
   return (
     <>
-      <FlorCard date={hojeISO} florId={entry.florId} nomeFlor={entry.nomeFlor} isSpecial={isSpecial} />
+      <FlorCard date={hojeISO} isSpecial={isSpecial} />
       <BilheteCard date={hojeISO} isSpecial={isSpecial} />
+      {entry.hasPolaroid && <PolaroidCard date={hojeISO} />}
+      {proximaParada && <ProximaParadaCard nomeLocal={proximaParada.nomeLocalProximaParada} />}
     </>
   );
 }

@@ -4,11 +4,6 @@
   gap: var(--space-md);
 }
 
-.dourado {
-  background: linear-gradient(135deg, var(--color-gold-light), var(--color-paper-soft));
-  border-color: var(--color-gold);
-}
-
 .selo {
   font-size: 40px;
   flex-shrink: 0;
@@ -18,6 +13,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
 }
 
 .label {
@@ -25,4 +21,12 @@
   font-weight: 700;
   font-size: 18px;
   color: var(--color-ink);
+}
+
+.local {
+  font-size: 14px;
+  color: var(--color-ink-soft);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

@@ -79,6 +79,21 @@ export function formatDatePtBR(dataISO) {
   return `${day} ${MESES_PT[month - 1]}`;
 }
 
+const MESES_PT_EXTENSO = [
+  'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+  'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro',
+];
+
+export function formatDateExtensoPtBR(dataISO) {
+  const { day, month } = parseISOParts(dataISO);
+  return `${day} de ${MESES_PT_EXTENSO[month - 1]}`;
+}
+
+export function formatDateNumericPtBR(dataISO) {
+  const { day, month, year } = parseISOParts(dataISO);
+  return `${pad2(day)}/${pad2(month)}/${year}`;
+}
+
 export function formatMonthLabelPtBR(yearMonth) {
   const [year, month] = yearMonth.split('-').map(Number);
   return `${MESES_PT[month - 1]} de ${year}`;

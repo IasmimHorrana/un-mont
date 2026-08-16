@@ -24,14 +24,18 @@ export function FlorDetalheScreen() {
   const florInfo = getFlorInfo(entry?.florId);
   const significado = entry?.significado || florInfo?.significado || '';
 
+  const classesQuadro = [styles.quadro, isSpecial ? styles.dourado : ''].filter(Boolean).join(' ');
+
   return (
     <div className={styles.screen}>
       <BackButton />
-      <motion.div className={styles.conteudo} layoutId={`flor-${data}`}>
-        <FlorIllustration florId={entry?.florId} size={180} isSpecial={isSpecial} />
+      <div className={styles.conteudo}>
         <h1 className={styles.nome}>{entry?.nomeFlor || florInfo?.nome || 'Flor do dia'}</h1>
+        <motion.div className={classesQuadro} layoutId={`flor-${data}`}>
+          <FlorIllustration florId={entry?.florId} size={240} isSpecial={isSpecial} />
+        </motion.div>
         {significado && <p className={styles.significado}>{significado}</p>}
-      </motion.div>
+      </div>
     </div>
   );
 }

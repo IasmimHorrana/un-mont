@@ -9,6 +9,11 @@
   border-color: var(--color-gold);
 }
 
+.selo {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
 .texto {
   display: flex;
   flex-direction: column;
@@ -16,14 +21,8 @@
 }
 
 .label {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--color-ink-faint);
-}
-
-.nome {
-  font-family: var(--font-title);
-  font-size: 22px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 18px;
   color: var(--color-ink);
 }

@@ -6,6 +6,8 @@ import { AlbumScreen } from './screens/AlbumScreen';
 import { FlorDetalheScreen } from './screens/FlorDetalheScreen';
 import { BilheteDetalheScreen } from './screens/BilheteDetalheScreen';
 import { DiaDetalheScreen } from './screens/DiaDetalheScreen';
+import { PolaroidDetalheScreen } from './screens/PolaroidDetalheScreen';
+import { ProximaParadaDetalheScreen } from './screens/ProximaParadaDetalheScreen';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           </Route>
           <Route path="/flor/:data" element={<FlorDetalheScreen />} />
           <Route path="/bilhete/:data" element={<BilheteDetalheScreen />} />
+          <Route path="/polaroid/:data" element={<PolaroidDetalheScreen />} />
+          <Route path="/proxima-parada" element={<ProximaParadaDetalheScreen />} />
           <Route path="/album/:data" element={<DiaDetalheScreen />} />
         </Routes>
       </BrowserRouter>

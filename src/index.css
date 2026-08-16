@@ -40,7 +40,8 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--font-title);
+  font-family: var(--font-body);
+  font-weight: 700;
   color: var(--color-ink);
   margin: 0;
 }

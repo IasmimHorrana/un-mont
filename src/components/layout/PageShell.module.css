@@ -11,3 +11,11 @@
   gap: var(--space-md);
   padding: var(--space-md);
 }
+
+.hojeRodape {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-ink-faint);
+  padding-bottom: var(--space-xs);
+}

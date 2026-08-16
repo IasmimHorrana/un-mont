@@ -33,6 +33,12 @@ export function DiarioProvider({ children }) {
     if (initRef.current) return;
     initRef.current = true;
 
+    if (import.meta.env.DEV) {
+      // Em dev sempre busca fresco — evita ficar preso ao cache de 12h enquanto se testa a planilha.
+      load();
+      return;
+    }
+
     const cached = readCache(CACHE_KEY);
     if (cached?.value) {
       setState({

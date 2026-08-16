@@ -29,7 +29,7 @@ export function AlbumDiaCard({ slot, isRead }) {
         aria-label={label}
       >
         <span className={styles.icone} aria-hidden="true">
-          {!unlocked ? '🔒' : hasContent ? (isSpecial ? '✨' : '🌸') : '🌱'}
+          {!unlocked ? '🔒' : hasContent ? (isSpecial ? '✨' : '🌼') : '🌱'}
         </span>
         <span className={styles.diaNumero}>{formatDatePtBR(date)}</span>
       </button>

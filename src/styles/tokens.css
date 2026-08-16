@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/quicksand-variable.woff2') format('woff2');
+}
+
 :root {
   --color-paper: #f6ecd9;
   --color-paper-soft: #fbf5e8;
@@ -7,7 +15,7 @@
   --color-mustard: #e3a72f;
   --color-mustard-deep: #c58a1f;
   --color-terracotta: #c1603f;
-  --color-terracotta-deep: #a04a2f;
+  --color-terracotta-deep: #c86d51;
   --color-olive: #7d8c4c;
   --color-olive-deep: #63703a;
   --color-burnt-orange: #cf6a3c;
@@ -16,12 +24,16 @@
   --color-gold-light: #f5e1a4;
   --color-gold-deep: #a8801f;
 
-  --color-ink: #4a3826;
+  --color-pastel-terracotta: #f1c6b0;
+  --color-pastel-mustard: #f2e2b0;
+  --color-pastel-olive: #d7deb8;
+  --color-pastel-lavanda: #dcd3ea;
+
+  --color-ink: #4a3e3d;
   --color-ink-soft: #7a6650;
   --color-ink-faint: #a4907a;
   --color-locked: #b9b0a2;
 
-  --font-title: 'Caveat', 'Segoe Print', 'Bradley Hand', cursive;
   --font-body: 'Quicksand', 'Nunito', 'Segoe UI', system-ui, sans-serif;
 
   --radius-sm: 10px;
@@ -44,8 +56,3 @@
   color-scheme: light;
 }
 
-/*
-  Fontes finais (Caveat/Quicksand) devem ser auto-hospedadas em /public/fonts
-  e declaradas aqui via @font-face antes do deploy final (ver public/fonts/README.txt).
-  Até lá, as pilhas de fallback acima já dão a sensação "cozy" sem depender de rede.
-*/

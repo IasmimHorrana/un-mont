@@ -17,8 +17,27 @@
 }
 
 .nome {
-  font-family: var(--font-title);
-  font-size: 32px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.quadro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-paper-soft);
+  border: 10px solid var(--color-kraft);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-card), inset 0 0 0 1px var(--color-paper-deep);
+  max-width: 100%;
+}
+
+.quadro.dourado {
+  border-color: var(--color-gold);
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-paper-soft));
+  box-shadow: var(--shadow-card), 0 0 24px -4px var(--color-gold-light), inset 0 0 0 1px var(--color-gold);
 }
 
 .significado {

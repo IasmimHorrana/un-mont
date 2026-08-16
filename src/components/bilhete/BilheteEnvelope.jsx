@@ -17,7 +17,6 @@ export function BilheteEnvelope({ date, texto, isSpecial = false }) {
       transition={{ duration: 0.35, ease: 'easeOut' }}
       style={{ transformOrigin: 'top' }}
     >
-      <span className={styles.selo} aria-hidden="true">💌</span>
       <div className={styles.corpo}>{texto}</div>
     </motion.div>
   );

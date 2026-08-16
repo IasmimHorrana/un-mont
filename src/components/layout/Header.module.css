@@ -2,23 +2,18 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: calc(var(--space-md) + var(--safe-top)) var(--space-md) var(--space-sm);
-  background: var(--color-kraft);
-  border-bottom: 2px dashed var(--color-mustard-deep);
+  padding: calc(var(--space-sm) + var(--safe-top)) var(--space-md) var(--space-sm);
+  background: var(--color-burnt-orange);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  box-shadow: var(--shadow-adesivo);
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-sm);
+  align-items: center;
+  justify-content: center;
 }
 
 .countdown {
-  font-family: var(--font-title);
-  font-size: 22px;
-  color: var(--color-terracotta-deep);
-}
-
-.date {
-  font-size: 14px;
-  color: var(--color-ink-soft);
-  white-space: nowrap;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-paper-soft);
 }

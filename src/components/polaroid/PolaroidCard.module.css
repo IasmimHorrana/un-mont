@@ -4,11 +4,6 @@
   gap: var(--space-md);
 }
 
-.dourado {
-  background: linear-gradient(135deg, var(--color-gold-light), var(--color-paper-soft));
-  border-color: var(--color-gold);
-}
-
 .selo {
   font-size: 40px;
   flex-shrink: 0;

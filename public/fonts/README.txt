@@ -1,6 +1,4 @@
-Coloque aqui os arquivos .woff2 das fontes finais (ex.: Caveat para títulos, Quicksand para corpo)
-e declare @font-face em src/styles/tokens.css apontando para /fonts/*.woff2.
-
-Até lá, o app usa as pilhas de fallback definidas em tokens.css (--font-title, --font-body),
-que já dão a sensação "cozy hand-drawn" sem depender de rede — importante para o PWA
-funcionar bem offline no iOS.
+Fonte auto-hospedada em uso: Quicksand (--font-body), única fonte do app — usada tanto
+em títulos quanto em texto de leitura. Fonte variável .woff2 baixada do Google Fonts.
+@font-face declarado em src/styles/tokens.css. Cobre apenas o range latin (inclui
+acentuação pt-BR); não há glifos cirílicos/vietnamitas/etc, o que mantém o arquivo pequeno.

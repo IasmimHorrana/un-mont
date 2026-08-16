@@ -1,11 +1,5 @@
 .envelope {
   background: var(--color-paper-soft);
-  background-image: repeating-linear-gradient(
-    180deg,
-    transparent,
-    transparent 27px,
-    rgba(164, 144, 122, 0.12) 28px
-  );
   border-radius: var(--radius-md);
   border: 1px solid var(--color-paper-deep);
   box-shadow: var(--shadow-card);
@@ -20,11 +14,6 @@
 .dourado {
   background-color: var(--color-gold-light);
   border-color: var(--color-gold);
-}
-
-.selo {
-  align-self: center;
-  font-size: 44px;
 }
 
 .corpo {

@@ -24,7 +24,7 @@ export function FlorIllustration({ florId, size = 96, isSpecial = false }) {
         alt={florInfo?.nome ?? 'Flor do dia'}
         width={size}
         height={size}
-        style={{ objectFit: 'contain' }}
+        style={{ objectFit: 'contain', maxWidth: '100%', height: 'auto' }}
       />
     );
   }

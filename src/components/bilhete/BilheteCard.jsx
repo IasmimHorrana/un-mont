@@ -14,8 +14,6 @@ export function BilheteCard({ date, isSpecial = false }) {
       </motion.span>
       <div className={styles.texto}>
         <span className={styles.label}>Bilhete do Dia</span>
-        <span className={styles.titulo}>{isSpecial ? 'Uma carta especial' : 'Sua carta de hoje'}</span>
-        <span className={styles.dica}>toque para abrir</span>
       </div>
     </Card>
   );
