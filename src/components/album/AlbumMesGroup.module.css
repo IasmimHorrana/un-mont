@@ -1,0 +1,17 @@
+.grupo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.titulo {
+  font-family: var(--font-title);
+  font-size: 20px;
+  color: var(--color-terracotta-deep);
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-sm);
+}

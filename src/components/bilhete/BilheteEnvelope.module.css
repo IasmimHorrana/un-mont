@@ -1,0 +1,40 @@
+.envelope {
+  background: var(--color-paper-soft);
+  background-image: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 27px,
+    rgba(164, 144, 122, 0.12) 28px
+  );
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-paper-deep);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  flex: 1;
+  min-height: 0;
+}
+
+.dourado {
+  background-color: var(--color-gold-light);
+  border-color: var(--color-gold);
+}
+
+.selo {
+  align-self: center;
+  font-size: 44px;
+}
+
+.corpo {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  white-space: pre-wrap;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--color-ink);
+  padding-right: 4px;
+}

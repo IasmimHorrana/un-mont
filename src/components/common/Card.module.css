@@ -1,0 +1,17 @@
+.card {
+  background: var(--color-paper-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-paper-deep);
+  padding: var(--space-md);
+  text-align: left;
+}
+
+.clickable {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.clickable:active {
+  transform: scale(0.98);
+}

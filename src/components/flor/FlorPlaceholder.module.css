@@ -1,0 +1,9 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dourado {
+  filter: drop-shadow(0 0 10px var(--color-gold-light));
+}

@@ -1,0 +1,29 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-md);
+  flex: 1;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.nome {
+  font-family: var(--font-title);
+  font-size: 32px;
+}
+
+.significado {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  max-width: 320px;
+}

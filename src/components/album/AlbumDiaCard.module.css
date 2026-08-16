@@ -1,0 +1,62 @@
+.diaCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-paper-deep);
+  background: var(--color-paper-soft);
+  box-shadow: var(--shadow-adesivo);
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  transition: transform 0.12s ease;
+}
+
+.diaCard:active {
+  transform: scale(0.95);
+}
+
+.diaNumero {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-ink-soft);
+}
+
+.icone {
+  font-size: 22px;
+}
+
+.lida {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 10px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.bloqueado {
+  background: var(--color-paper);
+  color: var(--color-locked);
+  filter: grayscale(0.6);
+  cursor: default;
+}
+
+.bloqueado .diaNumero {
+  color: var(--color-locked);
+}
+
+.pendente {
+  border-style: dashed;
+}
+
+.dourado {
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-paper-soft));
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 2px var(--color-gold-light), var(--shadow-adesivo);
+}

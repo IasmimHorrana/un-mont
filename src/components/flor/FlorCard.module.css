@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.dourado {
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-paper-soft));
+  border-color: var(--color-gold);
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-ink-faint);
+}
+
+.nome {
+  font-family: var(--font-title);
+  font-size: 22px;
+  color: var(--color-ink);
+}

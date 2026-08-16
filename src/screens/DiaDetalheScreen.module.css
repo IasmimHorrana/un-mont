@@ -1,0 +1,36 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  flex: 1;
+  min-height: 0;
+}
+
+.florBloco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  text-align: center;
+}
+
+.nome {
+  font-family: var(--font-title);
+  font-size: 26px;
+}
+
+.significado {
+  font-size: 15px;
+  color: var(--color-ink-soft);
+}
+
+.pendente {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-ink-soft);
+  text-align: center;
+  padding: var(--space-xl);
+}

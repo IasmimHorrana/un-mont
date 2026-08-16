@@ -1,0 +1,51 @@
+:root {
+  --color-paper: #f6ecd9;
+  --color-paper-soft: #fbf5e8;
+  --color-paper-deep: #ead9b8;
+  --color-kraft: #e3cfa3;
+
+  --color-mustard: #e3a72f;
+  --color-mustard-deep: #c58a1f;
+  --color-terracotta: #c1603f;
+  --color-terracotta-deep: #a04a2f;
+  --color-olive: #7d8c4c;
+  --color-olive-deep: #63703a;
+  --color-burnt-orange: #cf6a3c;
+
+  --color-gold: #d4af37;
+  --color-gold-light: #f5e1a4;
+  --color-gold-deep: #a8801f;
+
+  --color-ink: #4a3826;
+  --color-ink-soft: #7a6650;
+  --color-ink-faint: #a4907a;
+  --color-locked: #b9b0a2;
+
+  --font-title: 'Caveat', 'Segoe Print', 'Bradley Hand', cursive;
+  --font-body: 'Quicksand', 'Nunito', 'Segoe UI', system-ui, sans-serif;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+
+  --shadow-adesivo: 0 2px 0 rgba(74, 56, 38, 0.15), 0 8px 16px -6px rgba(74, 56, 38, 0.25);
+  --shadow-adesivo-pressed: 0 1px 0 rgba(74, 56, 38, 0.15), 0 3px 6px -2px rgba(74, 56, 38, 0.2);
+  --shadow-card: 0 10px 24px -12px rgba(74, 56, 38, 0.35);
+
+  --space-xs: 6px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  color-scheme: light;
+}
+
+/*
+  Fontes finais (Caveat/Quicksand) devem ser auto-hospedadas em /public/fonts
+  e declaradas aqui via @font-face antes do deploy final (ver public/fonts/README.txt).
+  Até lá, as pilhas de fallback acima já dão a sensação "cozy" sem depender de rede.
+*/
