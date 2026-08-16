@@ -7,26 +7,29 @@
 }
 
 :root {
-  --color-paper: #f6ecd9;
-  --color-paper-soft: #fbf5e8;
-  --color-paper-deep: #ead9b8;
-  --color-kraft: #e3cfa3;
+  /* Teste de paleta lilás — 2 tons da referência (claro E9D7FA / escuro C1B8E3),
+     com tintas/sombras derivadas deles pra manter as demais funções (borda, card, texto)
+     coerentes. --color-gold* fica de fora de propósito (é o tratamento do dia especial). */
+  --color-paper: #e9d7fa;
+  --color-paper-soft: #f5edfd;
+  --color-paper-deep: #dbb8e3;
+  --color-kraft: #c1b8e3;
 
-  --color-mustard: #e3a72f;
-  --color-mustard-deep: #c58a1f;
-  --color-terracotta: #c1603f;
-  --color-terracotta-deep: #c86d51;
-  --color-olive: #7d8c4c;
-  --color-olive-deep: #63703a;
-  --color-burnt-orange: #cf6a3c;
+  --color-mustard: #c1b8e3;
+  --color-mustard-deep: #a79cc7;
+  --color-terracotta: #c1b8e3;
+  --color-terracotta-deep: #7a6f99;
+  --color-olive: #a79cc7;
+  --color-olive-deep: #7a6f99;
+  --color-burnt-orange: #c1b8e3;
 
   --color-gold: #d4af37;
   --color-gold-light: #f5e1a4;
   --color-gold-deep: #a8801f;
 
-  --color-pastel-terracotta: #f1c6b0;
-  --color-pastel-mustard: #f2e2b0;
-  --color-pastel-olive: #d7deb8;
+  --color-pastel-terracotta: #fbcbf2;
+  --color-pastel-mustard: #dbb8e3;
+  --color-pastel-olive: #cfd2ff;
   --color-pastel-lavanda: #dcd3ea;
 
   --color-ink: #4a3e3d;

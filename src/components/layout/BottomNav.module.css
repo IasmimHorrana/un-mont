@@ -22,7 +22,7 @@
   text-decoration: none;
   font-family: var(--font-body);
   font-weight: 700;
-  color: var(--color-paper);
+  color: var(--color-ink);
   background: transparent;
   transition: background 0.15s ease, color 0.15s ease;
 }
