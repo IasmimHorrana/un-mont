@@ -2,7 +2,7 @@ import { FlorPlaceholder } from './FlorPlaceholder';
 import { getFlorInfo } from '../../utils/floresPool';
 
 // Troca por PNGs finais é só adicionar arquivos em /src/assets/flores — zero mudança de código.
-const florAssets = import.meta.glob('../../assets/flores/*.{png,svg}', {
+const florAssets = import.meta.glob('../../assets/flores/*.{png,webp,svg}', {
   eager: true,
   query: '?url',
   import: 'default',
