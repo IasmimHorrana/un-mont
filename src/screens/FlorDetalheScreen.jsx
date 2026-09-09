@@ -31,7 +31,7 @@ export function FlorDetalheScreen() {
       <BackButton />
       <div className={styles.conteudo}>
         <motion.div className={classesQuadro} layoutId={`flor-${data}`}>
-          <FlorIllustration florId={entry?.florId} size={240} isSpecial={isSpecial} />
+          <FlorIllustration florId={entry?.florId} fotoFlor={entry?.fotoFlor} size={240} isSpecial={isSpecial} />
         </motion.div>
         <span className={styles.tag}>Flor do Dia</span>
         <h1 className={styles.nome}>{entry?.nomeFlor || florInfo?.nome || 'Flor do dia'}</h1>

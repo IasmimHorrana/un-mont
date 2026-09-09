@@ -17,6 +17,7 @@ function normalizeRow(rawRow) {
   const nomeFlor = (row.nome_flor ?? '').trim();
   const bilhete = (row.bilhete ?? '').trim();
   const fotoPolaroid = toDirectImageUrl((row.foto_polaroid ?? '').trim());
+  const fotoFlor = toDirectImageUrl((row.foto_flor ?? '').trim());
   const fotoProximaParada = toDirectImageUrl((row.proxima_parada_foto ?? '').trim());
   const nomeLocalProximaParada = (row.proxima_parada_local ?? '').trim();
   return {
@@ -28,6 +29,7 @@ function normalizeRow(rawRow) {
     nomeFlor,
     significado: (row.significado ?? '').trim(),
     bilhete,
+    fotoFlor,
     fotoPolaroid,
     legendaPolaroid: (row.legenda_polaroid ?? '').trim(),
     hasPolaroid: Boolean(fotoPolaroid),

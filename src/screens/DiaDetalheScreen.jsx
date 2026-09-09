@@ -46,7 +46,7 @@ export function DiaDetalheScreen() {
       content: (
         <div className={styles.florBloco}>
           <div className={classesQuadro}>
-            <FlorIllustration florId={entry.florId} size={200} isSpecial={isSpecial} />
+            <FlorIllustration florId={entry.florId} fotoFlor={entry.fotoFlor} size={200} isSpecial={isSpecial} />
           </div>
           <span className={styles.tag}>Flor do Dia</span>
           <h1 className={styles.nome}>{entry.nomeFlor || florInfo?.nome}</h1>

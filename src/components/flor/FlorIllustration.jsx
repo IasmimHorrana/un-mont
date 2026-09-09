@@ -13,9 +13,11 @@ function resolveAssetUrl(florId) {
   return entry?.[1] ?? null;
 }
 
-export function FlorIllustration({ florId, size = 96, isSpecial = false }) {
-  const assetUrl = florId ? resolveAssetUrl(florId) : null;
+export function FlorIllustration({ florId, fotoFlor, size = 96, isSpecial = false }) {
   const florInfo = getFlorInfo(florId);
+  // foto_flor da planilha tem prioridade — permite trocar a imagem dia a dia,
+  // mesmo quando o nome/espécie da flor se repete em datas diferentes.
+  const assetUrl = fotoFlor || (florId ? resolveAssetUrl(florId) : null);
 
   if (assetUrl) {
     return (
