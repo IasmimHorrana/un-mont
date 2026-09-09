@@ -1,18 +1,18 @@
 import { useNavigate } from 'react-router-dom';
 import styles from './AlbumDiaCard.module.css';
 import { formatDatePtBR } from '../../utils/date';
-import cadeadoImg from '../../assets/cadeado.png';
-import florImg from '../../assets/flower.png';
+import { IconCheck } from '../common/Icon';
 
 export function AlbumDiaCard({ slot, isRead }) {
   const navigate = useNavigate();
-  const { date, unlocked, hasContent, isSpecial } = slot;
+  const { date, unlocked, hasContent, isSpecial, isToday } = slot;
 
   const classes = [
     styles.diaCard,
     !unlocked ? styles.bloqueado : '',
     unlocked && !hasContent ? styles.pendente : '',
     unlocked && isSpecial ? styles.dourado : '',
+    unlocked && !isSpecial && isToday ? styles.hoje : '',
   ].filter(Boolean).join(' ');
 
   const label = !unlocked
@@ -30,17 +30,10 @@ export function AlbumDiaCard({ slot, isRead }) {
         onClick={() => navigate(`/album/${date}`)}
         aria-label={label}
       >
-        <span className={styles.icone} aria-hidden="true">
-          {!unlocked
-            ? <img src={cadeadoImg} className={styles.cadeadoImg} alt="" />
-            : hasContent
-              ? (isSpecial ? '✨' : <img src={florImg} className={styles.florImg} alt="" />)
-              : '🌱'}
-        </span>
-        <span className={styles.diaNumero}>{formatDatePtBR(date)}</span>
+        {formatDatePtBR(date)}
       </button>
       {unlocked && hasContent && isRead && (
-        <span className={styles.lida} aria-hidden="true">✓</span>
+        <span className={styles.lida} aria-hidden="true"><IconCheck size={11} /></span>
       )}
     </div>
   );

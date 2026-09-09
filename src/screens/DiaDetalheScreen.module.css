@@ -20,6 +20,18 @@
   padding: var(--space-sm) 2px;
 }
 
+.tag {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-terracotta-deep);
+  background: var(--color-pastel-terracotta);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
 .nome {
   font-family: var(--font-body);
   font-weight: 700;
@@ -31,15 +43,13 @@
   align-items: center;
   justify-content: center;
   background: var(--color-paper-soft);
-  border: 8px solid var(--color-kraft);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: var(--space-md);
-  box-shadow: var(--shadow-card), inset 0 0 0 1px var(--color-paper-deep);
+  box-shadow: var(--shadow-card);
   max-width: 100%;
 }
 
 .quadro.dourado {
-  border-color: var(--color-gold);
   background: linear-gradient(135deg, var(--color-gold-light), var(--color-paper-soft));
   box-shadow: var(--shadow-card), 0 0 24px -4px var(--color-gold-light), inset 0 0 0 1px var(--color-gold);
 }

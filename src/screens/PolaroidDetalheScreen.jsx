@@ -25,7 +25,7 @@ export function PolaroidDetalheScreen() {
       <div className={styles.screen}>
         <BackButton />
         <div className={styles.pendente}>
-          <p>A polaroid de {formatDatePtBR(data)} ainda não chegou. 📷</p>
+          <p>A polaroid de {formatDatePtBR(data)} ainda não chegou.</p>
         </div>
       </div>
     );

@@ -32,7 +32,7 @@ export function DiaDetalheScreen() {
       <div className={styles.screen}>
         <BackButton to="/album" />
         <div className={styles.pendente}>
-          <p>O carinho de {formatDatePtBR(data)} ainda está sendo preparado. 🌱</p>
+          <p>O carinho de {formatDatePtBR(data)} ainda está sendo preparado.</p>
         </div>
       </div>
     );
@@ -45,10 +45,11 @@ export function DiaDetalheScreen() {
       key: 'flor',
       content: (
         <div className={styles.florBloco}>
-          <h1 className={styles.nome}>{entry.nomeFlor || florInfo?.nome}</h1>
           <div className={classesQuadro}>
             <FlorIllustration florId={entry.florId} size={200} isSpecial={isSpecial} />
           </div>
+          <span className={styles.tag}>Flor do Dia</span>
+          <h1 className={styles.nome}>{entry.nomeFlor || florInfo?.nome}</h1>
           {significado && <p className={styles.significado}>{significado}</p>}
         </div>
       ),

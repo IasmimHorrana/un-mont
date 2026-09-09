@@ -12,7 +12,7 @@ export function ProximaParadaDetalheScreen() {
       <div className={styles.screen}>
         <BackButton />
         <div className={styles.pendente}>
-          <p>Ainda não escolhemos a próxima parada. 📍</p>
+          <p>Ainda não escolhemos a próxima parada.</p>
         </div>
       </div>
     );

@@ -9,6 +9,7 @@ import { PolaroidCard } from '../components/polaroid/PolaroidCard';
 import { ProximaParadaCard } from '../components/proximaParada/ProximaParadaCard';
 import { useProximaParada } from '../hooks/useProximaParada';
 import { RecadinhoCard } from '../components/recadinho/RecadinhoCard';
+import { IconLeaf } from '../components/common/Icon';
 import { END_DATE } from '../utils/constants';
 
 export function HojeScreen() {
@@ -24,7 +25,7 @@ export function HojeScreen() {
   if (fase === 'pre-lancamento') {
     return (
       <div className={styles.pendente}>
-        <span className={styles.icone} aria-hidden="true">🌱</span>
+        <span className={styles.icone} aria-hidden="true"><IconLeaf size={34} /></span>
         <p>A nossa contagem regressiva ainda não começou. Volte em 16 de agosto!</p>
       </div>
     );
@@ -36,7 +37,7 @@ export function HojeScreen() {
   if (!entry?.hasContent) {
     return (
       <div className={styles.pendente}>
-        <span className={styles.icone} aria-hidden="true">🌱</span>
+        <span className={styles.icone} aria-hidden="true"><IconLeaf size={34} /></span>
         <p>O carinho de hoje ainda está sendo preparado. Volte daqui a pouco.</p>
         <RecadinhoCard />
       </div>
@@ -48,7 +49,7 @@ export function HojeScreen() {
       <FlorCard date={hojeISO} isSpecial={isSpecial} />
       <BilheteCard date={hojeISO} isSpecial={isSpecial} />
       {entry.hasPolaroid && <PolaroidCard date={hojeISO} />}
-      {proximaParada && <ProximaParadaCard nomeLocal={proximaParada.nomeLocalProximaParada} />}
+      {proximaParada && <ProximaParadaCard />}
       <RecadinhoCard />
     </>
   );

@@ -11,5 +11,6 @@
 }
 
 .pendente .icone {
-  font-size: 40px;
+  display: inline-flex;
+  color: var(--color-terracotta-deep);
 }

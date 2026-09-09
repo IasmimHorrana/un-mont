@@ -6,15 +6,30 @@ import { END_DATE } from '../../utils/constants';
 export function Header() {
   const { diasRestantes, fase } = useCountdown();
 
-  const countdownText = fase === 'pre-lancamento'
-    ? '🌿 A contagem começa em breve'
-    : fase === 'concluido'
-      ? '🎉 1 ano de amor!'
-      : `🌿 Faltam ${diasRestantes} dias • ${formatDateNumericPtBR(END_DATE)}`;
+  if (fase === 'pre-lancamento') {
+    return (
+      <header className={styles.header}>
+        <span className={styles.overline}>Diário Botânico do Amor</span>
+        <span className={styles.mensagem}>A contagem começa em breve</span>
+      </header>
+    );
+  }
+
+  if (fase === 'concluido') {
+    return (
+      <header className={styles.header}>
+        <span className={styles.overline}>Diário Botânico do Amor</span>
+        <span className={styles.numero}>1 ano</span>
+        <span className={styles.legenda}>de amor</span>
+      </header>
+    );
+  }
 
   return (
     <header className={styles.header}>
-      <span className={styles.countdown}>{countdownText}</span>
+      <span className={styles.overline}>Faltam para {formatDateNumericPtBR(END_DATE)}</span>
+      <span className={styles.numero}>{diasRestantes}</span>
+      <span className={styles.legenda}>dias</span>
     </header>
   );
 }

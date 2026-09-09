@@ -7,6 +7,7 @@ import { useDiario } from '../hooks/useDiario';
 import { useCountdown } from '../hooks/useCountdown';
 import { enviarRecadinho } from '../services/sheetdb';
 import { vibrate } from '../hooks/useVibration';
+import { IconHeart } from '../components/common/Icon';
 
 export function RecadinhoDetalheScreen() {
   const { byDate, refetch } = useDiario();
@@ -56,7 +57,8 @@ export function RecadinhoDetalheScreen() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ type: 'spring', stiffness: 400, damping: 18 }}
             >
-              Enviado com sucesso! 💕
+              <IconHeart size={18} />
+              Enviado com sucesso!
             </motion.span>
           ) : (
             <motion.div key="botao" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>

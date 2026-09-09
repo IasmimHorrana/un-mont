@@ -15,6 +15,7 @@ export function generateAlbumSlots(byDate, hojeISO) {
       date,
       index: i,
       isSpecial: date === END_DATE,
+      isToday: date === hojeISO,
       unlocked: isUnlocked(date, hojeISO),
       entry,
       hasContent: Boolean(entry?.hasContent),

@@ -1,37 +1,26 @@
 .card {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
 }
 
 .selo {
-  font-size: 36px;
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-pastel-terracotta);
+  color: var(--color-terracotta-deep);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.texto {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-.label {
+.tag {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 18px;
-  color: var(--color-ink);
-}
-
-.local {
-  font-size: 14px;
-  color: var(--color-ink-soft);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-terracotta-deep);
+  background: var(--color-pastel-terracotta);
+  padding: 4px 10px;
+  border-radius: 999px;
 }

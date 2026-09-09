@@ -1,7 +1,6 @@
 .envelope {
   background: var(--color-paper-soft);
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-paper-deep);
   box-shadow: var(--shadow-card);
   padding: var(--space-lg) var(--space-md);
   display: flex;

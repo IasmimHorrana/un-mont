@@ -1,21 +1,24 @@
 .shell {
-  flex: 1;
+  height: 100svh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .content {
   flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
-  padding: var(--space-md);
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md) 0;
+  overflow-y: auto;
 }
 
 .hojeRodape {
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--color-ink-faint);
-  padding-bottom: var(--space-xs);
+  padding: 2px 0 6px;
 }

@@ -1,19 +1,43 @@
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  padding: calc(var(--space-sm) + var(--safe-top)) var(--space-md) var(--space-sm);
-  background: var(--color-burnt-orange);
-  border-radius: 0 0 var(--radius-md) var(--radius-md);
-  box-shadow: var(--shadow-adesivo);
+  flex-shrink: 0;
+  padding: calc(var(--space-sm) + var(--safe-top)) var(--space-lg) 4px;
+  background: var(--color-paper);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
 }
 
-.countdown {
+.overline {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-terracotta-deep);
+}
+
+.numero {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: -1px;
   color: var(--color-ink);
+}
+
+.legenda {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+.mensagem {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-ink-soft);
 }

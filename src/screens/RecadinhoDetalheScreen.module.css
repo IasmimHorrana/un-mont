@@ -44,17 +44,16 @@
 .seloEnviado {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   justify-content: center;
   min-height: 44px;
   padding: 10px 22px;
   border-radius: var(--radius-lg);
   background: var(--color-pastel-terracotta);
-  border: 2px solid var(--color-terracotta-deep);
-  color: var(--color-ink);
+  color: var(--color-terracotta-deep);
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 16px;
-  transform: rotate(-2deg);
 }
 
 .erro {

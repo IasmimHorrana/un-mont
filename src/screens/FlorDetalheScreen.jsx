@@ -30,10 +30,11 @@ export function FlorDetalheScreen() {
     <div className={styles.screen}>
       <BackButton />
       <div className={styles.conteudo}>
-        <h1 className={styles.nome}>{entry?.nomeFlor || florInfo?.nome || 'Flor do dia'}</h1>
         <motion.div className={classesQuadro} layoutId={`flor-${data}`}>
           <FlorIllustration florId={entry?.florId} size={240} isSpecial={isSpecial} />
         </motion.div>
+        <span className={styles.tag}>Flor do Dia</span>
+        <h1 className={styles.nome}>{entry?.nomeFlor || florInfo?.nome || 'Flor do dia'}</h1>
         {significado && <p className={styles.significado}>{significado}</p>}
       </div>
     </div>

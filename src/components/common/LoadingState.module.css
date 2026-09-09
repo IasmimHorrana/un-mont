@@ -11,7 +11,8 @@
 }
 
 .bloom {
-  font-size: 40px;
+  display: inline-flex;
+  color: var(--color-terracotta-deep);
   animation: sway 1.6s ease-in-out infinite;
 }
 

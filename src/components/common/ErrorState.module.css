@@ -11,5 +11,6 @@
 }
 
 .icon {
-  font-size: 36px;
+  display: inline-flex;
+  color: var(--color-ink-faint);
 }
