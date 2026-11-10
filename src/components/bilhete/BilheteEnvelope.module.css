@@ -8,10 +8,25 @@
   gap: var(--space-md);
   flex: 1;
   min-height: 0;
+  position: relative;
+}
+
+/* Moldura fina interna, estilo papel de carta. */
+.envelope::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 1.5px solid var(--color-gray-mid);
+  border-radius: calc(var(--radius-md) - 6px);
+  pointer-events: none;
 }
 
 .dourado {
   background-color: var(--color-gold-light);
+  border-color: var(--color-gold);
+}
+
+.dourado::before {
   border-color: var(--color-gold);
 }
 
